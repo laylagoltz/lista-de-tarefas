@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  
+<head>
+<title>Minhas tarefas</title>
+<style>
+  * {
+  box-sizing: border-box;
+  margin: 0;
+  }
+body {
+  border: 10px solid rgb(197, 52, 197);
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+header{
+  border: 5px solid violet;
+  background: #6096ba;
+  
+}
+ 
+main{
+  flex:auto;
+  border: 5px solid purple;
+}
+
+
+footer{
+  border: 3px solid purple;
+  display: flex;
+}
+
+footer input {
+  flex: auto; 
+  padding: 5px;
+}
+
+</style>
+</head>
+<body>
+<header> 
+  <h1>Tarefas</h1>
+</header>
+<main>
+  <ul></ul>
+</main>
+<footer>
+  <input> 
+  <button onclick="add()">adicionar</button>
+</footer>
+<script> 
+
+// estado da aplicação
+const tarefas = ['Estudar HTML', 'Estudar CSS', 'Estudar JS']
+
+
+// alteradores de estado da aplicação
+function add() {
+const input = document.querySelector("input")
+const tarefa = input.value 
+tarefas.push(tarefa)
+input.value = ""
+render()
+}
+// mostar estado na tela
+function render() {
+const ul = document.querySelector("ul")
+ul.innerHTML = null
+
+
+
+
+tarefas.forEach(function(tarefa) {
+const li = document.createElement("li")
+li.innerText = tarefa 
+ul.appendChild(li)
+})
+
+
+}
+
+render()
+</script>
+</body>
+
+</html>
