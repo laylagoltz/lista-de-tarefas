@@ -1,3 +1,3 @@
 # lista-de-tarefas
-lista-de-tarefas-ih2v-rki9xk29h-layla-correa-goltzs-projects.vercel.app
+https://vercel.com/layla-correa-goltzs-projects/lista-de-tarefas-ih2v
 
